@@ -56,10 +56,11 @@ jobs:
 
         DATA: ${{ secrets.DATA }}
         KEY: ${{ secrets.KEY }}
+        CONFIG: ${{ secrets.CONFIG }}
       run: |
         pwd
-        cat <<-EOF > /home/runner/work/womail/womail/config.json
-          ${{ secrets.CONFIG }}
-        EOF
+        #cat <<-EOF > /home/runner/work/womail/womail/config.json
+        #  ${{ secrets.CONFIG }}
+        #EOF
         python womail.py
         #python main.py
