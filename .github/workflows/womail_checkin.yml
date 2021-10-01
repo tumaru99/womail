@@ -58,8 +58,9 @@ jobs:
         KEY: ${{ secrets.KEY }}
         CONFIG: ${{ secrets.CONFIG }}
       run: |
-        pwd
-        ls -l 
+        cat <<-EOF > /home/runner/work/womail/if_checkin.txt
+          womail
+        EOF        
         cat <<-EOF > /home/runner/work/womail/config.json
           ${{ secrets.CONFIG }}
         EOF
