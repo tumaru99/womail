@@ -385,7 +385,7 @@ class WoMailCheckIn:
 
 if __name__ == "__main__":
     with open(
-            os.path.join(os.path.dirname(os.path.dirname(__file__)), "./config.json"), "r", encoding="utf-8"
+            os.path.join(os.path.dirname(os.path.dirname(__file__)), "CONFIG"), "r", encoding="utf-8"
     ) as f:
         datas = json.loads(f.read())
     _check_item = datas.get("WOMAIL_URL_LIST", [])[1]
