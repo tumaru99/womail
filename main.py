@@ -198,6 +198,6 @@ if __name__ == '__main__':
     '''
     data = json.loads(os.getenv('data'))['account']
     for user in data:
-        message = main(user['womail_url'])
+        message = main(user['DATA'])
         print(message)
         push(user['push_token'],'联通沃邮箱 - 签到', message)
