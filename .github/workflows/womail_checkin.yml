@@ -60,7 +60,7 @@ jobs:
       run: |
         pwd
         ls -l 
-        cat <<-EOF > /home/runner/work/womail/womail/config.json
+        cat <<-EOF > /home/runner/work/womail/config.json
           ${{ secrets.CONFIG }}
         EOF
         python womail.py
