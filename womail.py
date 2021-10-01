@@ -388,5 +388,5 @@ if __name__ == "__main__":
             os.path.join(os.path.dirname(os.path.dirname(__file__)), "CONFIG"), "r", encoding="utf-8"
     ) as f:
         datas = json.loads(f.read())
-    _check_item = datas.get("WOMAIL_URL_LIST", [])[1]
+    _check_item = datas.get("WOMAIL_URL_LIST", [])[0]
     print(WoMailCheckIn(check_item=_check_item).main())
