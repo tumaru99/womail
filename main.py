@@ -196,7 +196,7 @@ if __name__ == '__main__':
         }]
     }
     '''
-    data = json.loads(os.getenv('data'))['account']
+    data = json.loads(os.getenv('DATA1'))['account']
     for user in data:
         message = main(user['womail_url'])
         print(message)
